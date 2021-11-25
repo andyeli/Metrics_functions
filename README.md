@@ -1,7 +1,7 @@
 # Imbalance Metrics
 This work presents a study for a set of performance evaluation metrics, in which the bias that occurs in multiclass metrics and the information obtained through the binary confusion matrix for an imbalanced data set will be analyzed. For the following study, the Matthews correlation coefficient (MCC) is considered a robust metric, as MCC exhibits the lowest bias in cases of data imbalance (Luque, 2019).
 
-[User's guide](C:\Users\Andrea\Documents\Github\Metrics_functions\User_guide.md)
+[User's guide](https://github.com/andyeli/Metrics_functions/blob/main/User_guide.md)
 
 >**imbalance_metrics.report(_y_true, y_pred_)**
 
