@@ -5,16 +5,16 @@ The [imbalance_metrics](https://github.com/andyeli/Metrics_functions/blob/main/i
 |Function            | Description | Returns |
 |----------------| ---------|-----|
 |**confusion_matrix_to_vectors**(_Confusion_matrix_) |   Convert matrix confusion to vectors|y_true,y_pred |
-|**sns**(_Confusion_matrix_) | Compute the sensitivity metric| {'Balanced': , 'Imbalanced': ,<br>'Bias': }|
-|**spc**(_Confusion_matrix_) | Computed specificity metric| {'Balanced': , 'Imbalanced': ,<br>'Bias': } |
-|**prc**(_Confusion_matrix_) | Compute the precision|{'Balanced': , 'Imbalanced': ,<br>'Bias': } |
-|**npv**(_Confusion_matrix_) |   Compute the Negative Predictive Value |{'Balanced': , 'Imbalanced': ,<br>'Bias': } |
+|**sns**(_Confusion_matrix_) | Compute the sensitivity metric| {'Balanced': , 'Imbalanced': ,'Bias': }|
+|**spc**(_Confusion_matrix_) | Computed specificity metric| {'Balanced': , 'Imbalanced': ,'Bias': } |
+|**prc**(_Confusion_matrix_) | Compute the precision|{'Balanced': , 'Imbalanced': ,'Bias': } |
+|**npv**(_Confusion_matrix_) |   Compute the Negative Predictive Value |{'Balanced': , 'Imbalanced': ,'Bias': } |
 |**acc**(_Confusion_matrix_) | Compute Accuracy| {'Classic':<br>'Balanced':<br>'Imbalanced': <br>'Bias': <br>'Average_Acc': <br>'Average_Acc_Balanced': <br>'Overall_Acc': <br>'Balanced_Acc': <br>'Balanced_Acc_weighted': |
-|**f1**(_Confusion_matrix_) |   Compute the F1 score |{'Balanced': , 'Imbalanced': ,<br>'Bias': } |
-|**gm**(_Confusion_matrix_) |   Compute the Geometric Mean |{'Balanced': , 'Imbalanced': ,<br>'Bias': } |
-|**mccn**(_Confusion_matrix_) |   Compute the Normalized versions of Matthews Correlation Coefficient  |{'Balanced': , 'Imbalanced': ,<br>'Bias': } |
-|**bmn**(_Confusion_matrix_) |   Compute the Bookmaker Informedness |{'Balanced': , 'Imbalanced': ,<br>'Bias': } |
-|**mkn**(_Confusion_matrix_) | Compute the Markedness|{'Balanced': , 'Imbalanced': ,<br>'Bias': } |
+|**f1**(_Confusion_matrix_) |   Compute the F1 score |{'Balanced': , 'Imbalanced': ,'Bias': } |
+|**gm**(_Confusion_matrix_) |   Compute the Geometric Mean |{'Balanced': , 'Imbalanced': ,'Bias': } |
+|**mccn**(_Confusion_matrix_) |   Compute the Normalized versions of Matthews Correlation Coefficient  |{'Balanced': , 'Imbalanced': ,'Bias': } |
+|**bmn**(_Confusion_matrix_) |   Compute the Bookmaker Informedness |{'Balanced': , 'Imbalanced': ,'Bias': } |
+|**mkn**(_Confusion_matrix_) | Compute the Markedness|{'Balanced': , 'Imbalanced': ,'Bias': } |
 | | | |
 
 >## Mathematical definition
@@ -22,7 +22,7 @@ Given a multi-class confusion matrix $\mathbf{M}∈\mathbb{R}^{(C×C)}$,  obtain
 
 In this work, we use the mathematical definition of imbalance given by (Luque, 2019). The imbalance coefficient $\delta_{c}$ , for a given class $c$ , is featured with a value in the $[-1,1]$ range, where $0$ means that classes are perfectly balanced. The $c$-class imbalance coefficient can be computed by
 
-$$\delta_{c}=2 \frac{\sum_{j=1}^{C} m_{c j}}{\sum_{i=1}^{C} \sum_{j=1}^{C} m_{i j}}-1 .$$
+![](https://latex.codecogs.com/svg.latex?\delta_{c}=2&space;\frac{\sum_{j=1}^{C}&space;m_{c&space;j}}{\sum_{i=1}^{C}&space;\sum_{j=1}^{C}&space;m_{i&space;j}}-1)
 
 A performance evaluation metric $\mu$ is a function that assigns to each confusion matrix, a real value on the set $\mathbb {R}$ i.e.,
 
