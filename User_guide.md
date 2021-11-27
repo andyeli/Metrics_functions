@@ -18,13 +18,15 @@ The [imbalance_metrics](https://github.com/andyeli/Metrics_functions/blob/main/i
 | | | |
 
 >## Mathematical definition
-Given a multi-class confusion matrix $\mathbf{M}∈\mathbb{R}^{(C×C)}$,  obtained from the true labels $\mathbf{Y}$  and the prediction  $\mathbf{\hat{Y}}$, where $C$ denotes the number of classes of interest, and the element $\mathbf{m}_{ij}∈\mathbf{M}$ is the number of samples that belong to class i-th, but that are classified as members of class j-th, i.e., $y_{n}=i$ and $\hat{y}_{n}=j$, for $n=1,…,N$. 
+Given a multi-class confusion matrix ![](https://latex.codecogs.com/svg.latex?\mathbf{M}\in\mathbb{R}^{(C&space;\times&space;C)}),  obtained from the true labels ![](https://latex.codecogs.com/svg.latex?\mathbf{Y})  and the prediction  ![](https://latex.codecogs.com/svg.latex?\mathbf{\hat{Y}}), where ![](https://latex.codecogs.com/svg.latex?C) denotes the number of classes of interest, and the element ![](https://latex.codecogs.com/svg.latex?\mathbf{m}_{ij}\in\mathbf{M}) is the number of samples that belong to class i-th, but that are classified as members of class j-th, i.e., ![](https://latex.codecogs.com/svg.latex?y_{n}=i) and ![](https://latex.codecogs.com/svg.latex?\hat{y}_{n}=j), for ![](https://latex.codecogs.com/svg.latex?n=1,\dots,N). 
 
-In this work, we use the mathematical definition of imbalance given by (Luque, 2019). The imbalance coefficient $\delta_{c}$ , for a given class $c$ , is featured with a value in the $[-1,1]$ range, where $0$ means that classes are perfectly balanced. The $c$-class imbalance coefficient can be computed by
+In this work, we use the mathematical definition of imbalance given by (Luque, 2019). The imbalance coefficient ![](https://latex.codecogs.com/svg.latex?\delta_{c}) , for a given class ![](https://latex.codecogs.com/svg.latex?c) , is featured with a value in the ![](https://latex.codecogs.com/svg.latex?[-1,1]) range, where $0$ means that classes are perfectly balanced. The $c$-class imbalance coefficient can be computed by
 
-![](https://latex.codecogs.com/svg.latex?\delta_{c}=2&space;\frac{\sum_{j=1}^{C}&space;m_{c&space;j}}{\sum_{i=1}^{C}&space;\sum_{j=1}^{C}&space;m_{i&space;j}}-1)
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\delta_{c}=2&space;\frac{\sum_{j=1}^{C}&space;m_{c&space;j}}{\sum_{i=1}^{C}&space;\sum_{j=1}^{C}&space;m_{i&space;j}}-1" />
+</p>
 
-A performance evaluation metric $\mu$ is a function that assigns to each confusion matrix, a real value on the set $\mathbb {R}$ i.e.,
+A performance evaluation metric $`\mu`$ is a function that assigns to each confusion matrix, a real value on the set $\mathbb {R}$ i.e.,
 
 $$\mu: Y \times \hat{Y} \rightarrow \mathbb{R}$$
 
