@@ -1,16 +1,16 @@
 # Imbalance Metrics
-This work presents a study for a set of performance evaluation metrics, in which the bias that occurs in multiclass metrics and the information obtained through the binary confusion matrix for an imbalanced data set will be analyzed. For the following study, the Matthews correlation coefficient (MCC) is considered a robust metric, as MCC exhibits the lowest bias in cases of data imbalance (Luque, 2019).
+This work presents a study for a set of performance evaluation metrics, in which the bias that occurs in multiclass metrics and the information obtained through the binary confusion matrix for an imbalanced data set will be analyzed. For the following study, the Matthews correlation coefficient (MCC) is considered a robust metric, as MCC exhibits the lowest bias in cases of data imbalance (Luque, 2019).  
 
-[User's guide](https://github.com/andyeli/Metrics_functions/blob/main/User_guide.md)
 
->**imbalance_metrics.report(_y_true, y_pred_)**
+>**imbalance_metrics.report(_y_true, y_pred_) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[source]](https://github.com/andyeli/Metrics_functions/blob/main/imbalance_metrics.py)**
 
-Este es un repositorio que ofrece un conjunto de métricas de evaluación de rendimiento para clasificación.
+Read more in the  [User's guide.](https://github.com/andyeli/Metrics_functions/blob/main/User_guide.md)
 
 |I/O             | Description                                         |
 |----------------| ----------------------------------------------------| 
-|**Parameters**: |   **y_true**: **_1d array-like_**<br>Ground truth(correct) target value.<br>**y_pred**: **_1d array-like_**<br>Estimated targets as returned |
-|**Returns**:        | x                                               |
+|**Parameters**: |   **y_true**: **_1d array-like_**<br>Ground truth (correct) target value.<br>**y_pred**: **_1d array-like_**<br>Estimated targets as returned by a classifier |
+|**Returns**:        | Print tables: <br> **score** (_PRC, NPV, ACC, F1,MCCn and MKn_), <br>**bias** (_PRC, NPV, ACC, F1,MCCn and MKn_)<br>**coefficients** (_LambdaPP, LambdaNN and Delta_) <br>**multiclass metrics** (_OA, BA, BAW, AA, K and MCC_). |
+|**Other**: |   **Report**: A .csv file with metrics results. |
 | | |
 
 
@@ -21,7 +21,7 @@ import imbalance_metrics
 y_true = [0,1,0,0,1,1,1]
 y_pred = [0,1,1,0,1,1,1]
 
-results = im.report(y_true,y_pred)
+imbalance_metrics.report(y_true,y_pred)
 ```
 ```
 ----------------------------------- Score -----------------------------------

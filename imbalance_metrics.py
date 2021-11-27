@@ -19,7 +19,7 @@ Authors
                Guadalajara, México 
                http://gdl.cinvestav.mx
 
-Date          November 14th 2020
+Date          November 26th 2021
 Version       1.0
 """
 #%%
@@ -295,9 +295,6 @@ def report(y_test,y_pred):
     writer.writerow(["K",metrics[4]]) 
     writer.writerow(["MCC",metrics[5]])  
     
-
-    return metrics
-
 
 
 
